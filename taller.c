@@ -1,21 +1,50 @@
 /* Inclusión de archivos */
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
-#define TEXTO 100
-/* Función principal */
-int main (int argc,char **argv)
+#define MAXIMO 1024
+
+void encriptar(char cadena[MAXIMO],int numero); //funcion que encriptara el mensaje
+void encriptar(char cadena[MAXIMO],int numero) //implementacion
 {
-   char llave[3];
-   char cadena[TEXTO] = {0};
+   int i=0;
+  // char letra;
+
+   while (cadena[i]!= '\0')
+   {
+      cadena[i]=cadena[i]+numero;
+      i++;
+   }
+   printf("\nMensaje cifrado:%s\n",cadena);
+
+}
+
+
+
+/* Función principal */
+
+int main ()
+{
+
+   int llave;
+   char cadena[MAXIMO] = {0};
 
    // Impresión por pantalla y salida del programa
    printf("cifrado ciclico\n");
    printf("Ingrese el mensaje a cifrar:");
-   fgets(cadena,TEXTO,stdin);
+   scanf("%1024[^\n]",cadena);
+
    printf("Ingrese la llave numerica:");
-   fgets(llave,3,stdin);
-   printf("%s", llave);
-   printf("%s", cadena);
+   scanf("%d",&llave);
+   encriptar(cadena, llave);
+   getchar();
+//printf("%s", llave);
+   //printf("%s", cadena);
+
+
+
+
+
    return 0;
 
 }
