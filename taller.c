@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 #define MAXIMO 1024
-
+#define ESPACIO 32
 void encriptar(char cadena[MAXIMO],int numero); //funcion que encriptara el mensaje
 void encriptar(char cadena[MAXIMO],int numero) //implementacion
 {
@@ -12,12 +13,25 @@ void encriptar(char cadena[MAXIMO],int numero) //implementacion
 
    while (cadena[i]!= '\0')
    {
-      cadena[i]=cadena[i]+numero;
-      i++;
+         if (cadena[i] == ESPACIO)
+             {
+              cadena [i]=cadena[i]-numero;
+             }
+         cadena[i]=cadena[i]+numero;
+         i++;
+              
    }
    printf("\nMensaje cifrado:%s\n",cadena);
 
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -34,6 +48,7 @@ int main ()
    printf("Ingrese el mensaje a cifrar:");
    scanf("%1024[^\n]",cadena);
 
+
    printf("Ingrese la llave numerica:");
    scanf("%d",&llave);
    encriptar(cadena, llave);
@@ -48,3 +63,5 @@ int main ()
    return 0;
 
 }
+
+
