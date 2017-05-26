@@ -32,6 +32,11 @@ void encriptar(char cadena[MAXIMO],int numero) //implementacion
 
          cadena[i]=cadena[i];
          }
+         else if(cadena[i]<MINMAY)
+           {
+             cadena[i]=cadena[i]+LETRAS;
+             cadena[i]=cadena[i];
+           }
          else
          {
          cadena[i]=cadena[i]-LETRAS;
