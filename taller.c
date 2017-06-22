@@ -11,7 +11,11 @@
 
 //SE CONSIDERA QUE EL USUARIO NO IGRESARA LETRAS MINUSCULAS (LO DIJO EN LA ULTIMA CLASE).
 //puede encriptar mensajes.
+<<<<<<< HEAD
 //programacion de sistemas.
+=======
+
+>>>>>>> 4735f04e900723dd6e3012ab6d5970ee6d515f82
 
 void encriptar(char cadena[MAXIMO],int numero); //funcion que encriptara el mensaje
 void encriptar(char cadena[MAXIMO],int numero) //implementacion
