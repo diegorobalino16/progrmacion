@@ -10,7 +10,7 @@
 #define LETRAS 26
 
 //SE CONSIDERA QUE EL USUARIO NO IGRESARA LETRAS MINUSCULAS (LO DIJO EN LA ULTIMA CLASE).
-
+//puede encriptar mensajes.
 
 
 void encriptar(char cadena[MAXIMO],int numero); //funcion que encriptara el mensaje
